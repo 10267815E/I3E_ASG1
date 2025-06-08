@@ -27,6 +27,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("PlayerBehaviour script started");
 
     }
 
