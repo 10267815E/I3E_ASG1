@@ -30,19 +30,25 @@ public class PlayerBehaviour : MonoBehaviour
     
 
     void OnInteract()
-    {
-        if (canInteract)
-        {
-            if (currentCollectible != null)
-            {
-                currentCollectible.Collect(this);
-                Debug.Log("Interacting with coin");
-            }
-            
+   {
+    if (canInteract && currentCollectible != null)
+     {
+        currentCollectible.Collect(this);
+        collectedCount++;
 
+        Debug.Log("Collected item. Count: " + collectedCount);
+
+        if (collectedCount >= totalCollectibles)
+        {
+            Debug.Log("All items collected! You win!");
+            // TODO: Trigger a UI message later
         }
 
-    }
+        // Reset interaction
+        currentCollectible = null;
+        canInteract = false;
+     }
+   } 
     
     void OnTriggerEnter(Collider other)
     {
