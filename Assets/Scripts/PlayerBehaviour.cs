@@ -9,7 +9,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     
 
-    CoinBehaviour currentCoin; // Reference to the CoinBehaviour script
+    CollectibleBehaviour currentCollectible; // Reference to the CoinBehaviour script
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     
@@ -31,9 +31,9 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if (canInteract)
         {
-            if (currentCoin != null)
+            if (currentCollectible != null)
             {
-                currentCoin.Collect(this);
+                currentCollectible.Collect(this);
                 Debug.Log("Interacting with coin");
             }
             
@@ -48,7 +48,7 @@ public class PlayerBehaviour : MonoBehaviour
         if (other.CompareTag("Collectible"))
         {
             canInteract = true;
-            currentCoin = other.GetComponent<CoinBehaviour>();
+            currentCollectible = other.GetComponent<CollectibleBehaviour>();
         }
         
 

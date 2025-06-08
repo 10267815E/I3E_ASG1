@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CollectibleBehaviour : MonoBehaviour
+public class CoinBehaviour : MonoBehaviour
 {
 
     
