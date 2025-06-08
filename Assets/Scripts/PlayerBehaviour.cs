@@ -7,17 +7,6 @@ public class PlayerBehaviour : MonoBehaviour
     bool canInteract = false;
 
 
-    [SerializeField]
-
-    GameObject projectile;
-
-    [SerializeField]
-
-    Transform spawnPoint;
-
-    [SerializeField]
-
-    float fireStrength = 0f;
 
     CoinBehaviour currentCoin; // Reference to the CoinBehaviour script
     
@@ -64,13 +53,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     }
 
-    void OnFire()
-    {
-        GameObject newProjectile = Instantiate(projectile, spawnPoint.position, spawnPoint.rotation);
-        Vector3 fireForce = spawnPoint.forward * fireStrength;
-
-        newProjectile.GetComponent<Rigidbody>().AddForce(fireForce);
-    }
+    
 
     
 
