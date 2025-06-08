@@ -7,6 +7,7 @@ public class PlayerBehaviour : MonoBehaviour
     bool canInteract = false;
 
 
+    
 
     CoinBehaviour currentCoin; // Reference to the CoinBehaviour script
     
