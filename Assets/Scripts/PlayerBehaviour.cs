@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerBehaviour : MonoBehaviour
 {
     bool canInteract = false;
+    public int collectedCount = 0;
+    public int totalCollectibles = 5;
 
 
     
@@ -17,7 +19,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("PlayerBehaviour script started");
+        
 
     }
 
@@ -57,8 +59,4 @@ public class PlayerBehaviour : MonoBehaviour
     
 
     
-
-
-
-
 }

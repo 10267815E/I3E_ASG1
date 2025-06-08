@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 88259212}
   - component: {fileID: 88259211}
   - component: {fileID: 88259210}
+  - component: {fileID: 88259214}
   m_Layer: 0
   m_Name: circuit board
   m_TagString: Collectible
@@ -227,6 +228,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &88259214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88259209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb8e78141c543c428ce30b97a7d4730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &302699908
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,6 +252,7 @@ GameObject:
   - component: {fileID: 302699911}
   - component: {fileID: 302699910}
   - component: {fileID: 302699909}
+  - component: {fileID: 302699913}
   m_Layer: 0
   m_Name: gear cog
   m_TagString: Collectible
@@ -335,6 +349,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &302699913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302699908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb8e78141c543c428ce30b97a7d4730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,6 +494,7 @@ GameObject:
   - component: {fileID: 432266710}
   - component: {fileID: 432266709}
   - component: {fileID: 432266708}
+  - component: {fileID: 432266712}
   m_Layer: 0
   m_Name: Tool box
   m_TagString: Collectible
@@ -564,6 +591,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &432266712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432266707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb8e78141c543c428ce30b97a7d4730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &469101705
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,6 +615,7 @@ GameObject:
   - component: {fileID: 469101708}
   - component: {fileID: 469101707}
   - component: {fileID: 469101706}
+  - component: {fileID: 469101710}
   m_Layer: 0
   m_Name: Wrench
   m_TagString: Collectible
@@ -672,6 +712,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &469101710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469101705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb8e78141c543c428ce30b97a7d4730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &613161637 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 453084650579209855, guid: 035bf1ba97d19214580cfe6f5a29fdc3, type: 3}
