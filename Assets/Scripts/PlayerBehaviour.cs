@@ -9,6 +9,9 @@ public class PlayerBehaviour : MonoBehaviour
     public int totalCollectibles = 5;
 
     public int health = 100; // Player's health
+
+    public Transform spawnPoint;
+
     DoorBehaviour currentDoor; // Reference to the DoorBehaviour script
 
 

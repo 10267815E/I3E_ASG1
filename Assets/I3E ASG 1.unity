@@ -11016,6 +11016,7 @@ MonoBehaviour:
   collectedCount: 0
   totalCollectibles: 5
   health: 100
+  spawnPoint: {fileID: 2121451190}
 --- !u!54 &613161645
 Rigidbody:
   m_ObjectHideFlags: 0
