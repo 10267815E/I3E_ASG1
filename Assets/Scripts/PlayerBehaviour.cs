@@ -1,12 +1,15 @@
 using System.Data.Common;
 using Unity.VisualScripting;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class PlayerBehaviour : MonoBehaviour
 {
     bool canInteract = false;
     public int collectedCount = 0;
     public int totalCollectibles = 5;
+
+    private List<CollectibleBehaviour> allCollectibles = new List<CollectibleBehaviour>();
 
     public int health = 100; // Player's health
 
@@ -24,8 +27,13 @@ public class PlayerBehaviour : MonoBehaviour
 
 
     void Start()
-    {
 
+    {   
+        CollectibleBehaviour[] foundCollectibles = FindObjectsByType<CollectibleBehaviour>(FindObjectsSortMode.None);
+        foreach (CollectibleBehaviour collectible in foundCollectibles)
+        {
+            allCollectibles.Add(collectible);
+        }
 
     }
 
@@ -101,26 +109,30 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
-    public void Respawn()
-    {
-        CharacterController controller = GetComponent<CharacterController>(); //Get character controller component
+    void Respawn()
 
-        if (controller != null) // Check if the CharacterController component exists
+    {
+        CharacterController controller = GetComponent<CharacterController>();
+        if (controller != null)
         {
-            controller.enabled = false; // Disable the controller to prevent movement during respawn
-            transform.position = spawnPoint.position; // Move the player to the spawn point
-            controller.enabled = true; // Re-enable the controller after moving
+            controller.enabled = false;
+            transform.position = spawnPoint.position;
+            controller.enabled = true;
         }
 
+        health = 100;
+        collectedCount = 0;
 
-        health = 100; // Reset health to full
-        collectedCount = 0; // Reset collected items count
-        
+        // Respawn all collectibles using the stored references
+        foreach (CollectibleBehaviour collectible in allCollectibles)  // For loop to iterate through all collectibles
+        {
+            collectible.Respawn();
+        }
 
+        Debug.Log("Player respawned. Collectibles reset.");
 
-        Debug.Log("Player respawned.");
-        
     }
+
 
     
 
