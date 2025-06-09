@@ -101,7 +101,7 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
-    void Respawn()
+    public void Respawn()
     {
         CharacterController controller = GetComponent<CharacterController>(); //Get character controller component
 
