@@ -8,10 +8,12 @@ public class PlayerBehaviour : MonoBehaviour
     public int collectedCount = 0;
     public int totalCollectibles = 5;
 
+    public int health = 100; // Player's health
+
 
     
 
-    CollectibleBehaviour currentCollectible; // Reference to the CoinBehaviour script
+    CollectibleBehaviour currentCollectible; // Reference to the CollectibleBehaviour script
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     

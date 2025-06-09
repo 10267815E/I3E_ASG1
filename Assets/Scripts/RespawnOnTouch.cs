@@ -11,12 +11,15 @@ public class RespawnOnTouch : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             CharacterController controller = other.GetComponent<CharacterController>();
-            if (controller != null)
+            PlayerBehaviour player = other.GetComponent<PlayerBehaviour>();
+            if (controller != null && player != null)
             {
+                player.health = 0; // Set player's health to 0
                 // Disable the controller before changing position
                 controller.enabled = false;
                 other.transform.position = spawnpoint.position;
                 controller.enabled = true;
+
             }
         }
     }
