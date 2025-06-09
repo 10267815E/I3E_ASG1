@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class ToxicZone : MonoBehaviour
 {
-    public int damagePerSecond = 10; // Damage per second
-    private float damageCooldown = 1f; // One second between damage ticks
+    public int damagePerSecond = 30; // Damage per second
+    private float damageCooldown = 0.3f; // One second between damage ticks
     private float timer = 0f;
 
     void OnTriggerStay(Collider other)
