@@ -85,8 +85,30 @@ public class PlayerBehaviour : MonoBehaviour
         if (collision.gameObject.CompareTag("Truck"))
         {
             health -= 50; // Reduce health by 50 when hit by a truck
+            if (health <= 0)
+            {
+                Respawn();
+            }
         }
     }
+    
+    void Respawn()
+   {
+     CharacterController controller = GetComponent<CharacterController>(); //Get character controller component
+
+        if (controller != null) // Check if the CharacterController component exists
+        {
+            controller.enabled = false; // Disable the controller to prevent movement during respawn
+            transform.position = spawnPoint.position; // Move the player to the spawn point
+            controller.enabled = true; // Re-enable the controller after moving
+        }
+
+
+        health = 100; // Reset health to full
+
+
+        Debug.Log("Player respawned.");
+   }
 
 
 
