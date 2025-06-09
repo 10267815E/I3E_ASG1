@@ -31,10 +31,15 @@ public class PlayerBehaviour : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        Debug.Log("Player Health: " + health);
+{
+    Debug.Log("Player Health: " + health);
 
+    // Check if health has dropped to 0 or below
+    if (health <= 0)
+    {
+        Respawn(); // Call the respawn function
     }
+}
 
 
     void OnInteract()
@@ -109,6 +114,7 @@ public class PlayerBehaviour : MonoBehaviour
 
 
         Debug.Log("Player respawned.");
+        
     }
 
     
