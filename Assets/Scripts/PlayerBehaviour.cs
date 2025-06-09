@@ -31,15 +31,18 @@ public class PlayerBehaviour : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-{
-    Debug.Log("Player Health: " + health);
 
-    // Check if health has dropped to 0 or below
-    if (health <= 0)
     {
-        Respawn(); // Call the respawn function
+        Debug.Log("Player Health: " + health);
+        Debug.Log("Collected Items: " + collectedCount + "/" + totalCollectibles);
+
+        // Check if health has dropped to 0 or below
+        if (health <= 0)
+        {
+            Respawn(); // Call the respawn function
+        }
+
     }
-}
 
 
     void OnInteract()
@@ -111,6 +114,8 @@ public class PlayerBehaviour : MonoBehaviour
 
 
         health = 100; // Reset health to full
+        collectedCount = 0; // Reset collected items count
+        
 
 
         Debug.Log("Player respawned.");
