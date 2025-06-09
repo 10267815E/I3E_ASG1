@@ -11,6 +11,7 @@ TagManager:
   - Giftbox
   - Projectile
   - Truck
+  - Hazard
   layers:
   - Default
   - TransparentFX

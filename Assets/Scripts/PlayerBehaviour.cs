@@ -32,6 +32,7 @@ public class PlayerBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("Player Health: " + health);
 
     }
 
@@ -91,10 +92,10 @@ public class PlayerBehaviour : MonoBehaviour
             }
         }
     }
-    
+
     void Respawn()
-   {
-     CharacterController controller = GetComponent<CharacterController>(); //Get character controller component
+    {
+        CharacterController controller = GetComponent<CharacterController>(); //Get character controller component
 
         if (controller != null) // Check if the CharacterController component exists
         {
@@ -108,7 +109,10 @@ public class PlayerBehaviour : MonoBehaviour
 
 
         Debug.Log("Player respawned.");
-   }
+    }
+
+    
+
 
 
 
