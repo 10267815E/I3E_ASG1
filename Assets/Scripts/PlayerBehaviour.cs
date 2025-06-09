@@ -12,25 +12,26 @@ public class PlayerBehaviour : MonoBehaviour
     DoorBehaviour currentDoor; // Reference to the DoorBehaviour script
 
 
-    
+
 
     CollectibleBehaviour currentCollectible; // Reference to the CollectibleBehaviour script
-    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    
+
 
 
     void Start()
     {
-        
+
 
     }
 
     // Update is called once per frame
-    void Update(){
-        
+    void Update()
+    {
+
     }
-    
+
 
     void OnInteract()
     {
@@ -61,7 +62,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         canInteract = false;
     }
-    
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Collectible"))
@@ -76,7 +77,15 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
-    
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Truck"))
+        {
+            health -= 50; // Reduce health by 50 when hit by a truck
+        }
+    }
 
-    
+
+
+
 }

@@ -10,6 +10,7 @@ TagManager:
   - Door
   - Giftbox
   - Projectile
+  - Truck
   layers:
   - Default
   - TransparentFX
