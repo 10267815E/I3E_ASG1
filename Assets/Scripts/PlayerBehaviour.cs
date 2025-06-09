@@ -9,6 +9,7 @@ public class PlayerBehaviour : MonoBehaviour
     public int totalCollectibles = 5;
 
     public int health = 100; // Player's health
+    DoorBehaviour currentDoor; // Reference to the DoorBehaviour script
 
 
     
@@ -32,36 +33,47 @@ public class PlayerBehaviour : MonoBehaviour
     
 
     void OnInteract()
-   {
-    if (canInteract && currentCollectible != null)
-     {
-        currentCollectible.Collect(this);
-        collectedCount++;
+    {
+        if (!canInteract) return;
 
-        Debug.Log("Collected item. Count: " + collectedCount);
-
-        if (collectedCount >= totalCollectibles)
+        if (currentCollectible != null)
         {
-            Debug.Log("All items collected! You win!");
-            // TODO: Trigger a UI message later
+            currentCollectible.Collect(this);
+            collectedCount++;
+
+            Debug.Log("Collected item. Count: " + collectedCount);
+
+            if (collectedCount >= totalCollectibles)
+            {
+                Debug.Log("All items collected! You win!");
+                // TODO: Trigger a UI message later
+            }
+
+            currentCollectible = null;
         }
 
-        // Reset interaction
-        currentCollectible = null;
+        if (currentDoor != null)
+        {
+            currentDoor.Interact();
+            Debug.Log("Interacted with door");
+            currentDoor = null;
+        }
+
         canInteract = false;
-     }
-   } 
+    }
     
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.name);
         if (other.CompareTag("Collectible"))
         {
-            canInteract = true;
             currentCollectible = other.GetComponent<CollectibleBehaviour>();
+            canInteract = true;
         }
-        
-
+        else if (other.CompareTag("Door"))
+        {
+            currentDoor = other.GetComponent<DoorBehaviour>();
+            canInteract = true;
+        }
     }
 
     
