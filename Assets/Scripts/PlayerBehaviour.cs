@@ -18,8 +18,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     DoorBehaviour currentDoor; // Reference to the DoorBehaviour script
 
-    [SerializeField]
-    TextMeshProUGUI healthText; // Reference to the TextMeshProUGUI component for displaying health
+    
 
 
 
@@ -33,6 +32,7 @@ public class PlayerBehaviour : MonoBehaviour
     void Start()
 
     {   
+        
         CollectibleBehaviour[] foundCollectibles = FindObjectsByType<CollectibleBehaviour>(FindObjectsSortMode.None);
         foreach (CollectibleBehaviour collectible in foundCollectibles)
         {
