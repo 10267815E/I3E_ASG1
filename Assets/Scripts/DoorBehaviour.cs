@@ -6,6 +6,8 @@ public class DoorBehaviour : MonoBehaviour
     private Vector3 closedRotation;
     private Vector3 openRotation;
 
+    public PlayerBehaviour player; // Reference to the player script
+
     void Start()
     {
         closedRotation = transform.eulerAngles;
@@ -14,16 +16,27 @@ public class DoorBehaviour : MonoBehaviour
 
     public void Interact()
     {
-        if (isOpen)
+
+
+        if (player.collectedCount >= 3) // Check if player has at least 3 collectibles
         {
-            transform.eulerAngles = closedRotation;
-            isOpen = false;
+            if (isOpen)
+            {
+                transform.eulerAngles = closedRotation;
+                isOpen = false;
+            }
+            else
+            {
+                transform.eulerAngles = openRotation;
+                isOpen = true;
+                Debug.Log("Door opened!");
+            }
         }
         else
         {
-            transform.eulerAngles = openRotation;
-            isOpen = true;
+            Debug.Log("Collect at least 3 energy sources to unlock this door!");
         }
     }
 }
+
 
