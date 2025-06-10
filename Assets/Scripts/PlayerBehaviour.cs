@@ -2,6 +2,7 @@ using System.Data.Common;
 using Unity.VisualScripting;
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
 
 public class PlayerBehaviour : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class PlayerBehaviour : MonoBehaviour
     public Transform spawnPoint;
 
     DoorBehaviour currentDoor; // Reference to the DoorBehaviour script
+
+    [SerializeField]
+    TextMeshProUGUI healthText; // Reference to the TextMeshProUGUI component for displaying health
 
 
 
