@@ -45,8 +45,7 @@ public class PlayerBehaviour : MonoBehaviour
     void Update()
 
     {
-        Debug.Log("Player Health: " + health);
-        Debug.Log("Collected Items: " + collectedCount + "/" + totalCollectibles);
+
 
         // Check if health has dropped to 0 or below
         if (health <= 0)
@@ -66,7 +65,7 @@ public class PlayerBehaviour : MonoBehaviour
             currentCollectible.Collect(this);
             collectedCount++;
 
-            Debug.Log("Collected item. Count: " + collectedCount);
+            
 
             if (collectedCount >= totalCollectibles)
             {
