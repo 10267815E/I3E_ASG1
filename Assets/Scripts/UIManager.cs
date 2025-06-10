@@ -7,8 +7,10 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI collectibleText;
     public PlayerBehaviour player;
 
-    public GameObject popupScreenUI; 
+    public GameObject popupScreenUI;
     private bool popupActive = true;
+
+    public GameObject victoryPanelUI; // UI for victory screen
 
     void Start()
     {
@@ -25,11 +27,19 @@ public class UIManager : MonoBehaviour
             popupActive = false;
         }
 
-        if (!popupActive && player != null) 
+        if (!popupActive && player != null)
         {
             healthText.text = "Health: " + player.health;
             collectibleText.text = "Collectibles: " + player.collectedCount + " / " + player.totalCollectibles;
         }
     }
+
+    public void ShowVictoryPanel()
+
+    {
+        victoryPanelUI.SetActive(true); // Show victory panel when player collects all collectibles by setting panel as active
+
+    }
+
 }
 

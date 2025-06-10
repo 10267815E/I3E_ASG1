@@ -16,6 +16,12 @@ public class PlayerBehaviour : MonoBehaviour
 
     public Transform spawnPoint;
 
+    public UIManager uiManager;
+
+
+    
+
+
     DoorBehaviour currentDoor; // Reference to the DoorBehaviour script
 
 
@@ -71,6 +77,7 @@ public class PlayerBehaviour : MonoBehaviour
             {
                 Debug.Log("All items collected! You win!");
                 Respawn(); // Respawn the player after collecting all items
+                uiManager.ShowVictoryPanel(); // Show victory panel
             }
 
             currentCollectible = null;
@@ -136,12 +143,6 @@ public class PlayerBehaviour : MonoBehaviour
 
     }
     
-
-
-    
-
-
-
 
 
 }
