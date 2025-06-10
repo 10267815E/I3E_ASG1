@@ -18,7 +18,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     DoorBehaviour currentDoor; // Reference to the DoorBehaviour script
 
-    
+
 
 
 
@@ -31,8 +31,8 @@ public class PlayerBehaviour : MonoBehaviour
 
     void Start()
 
-    {   
-        
+    {
+
         CollectibleBehaviour[] foundCollectibles = FindObjectsByType<CollectibleBehaviour>(FindObjectsSortMode.None);
         foreach (CollectibleBehaviour collectible in foundCollectibles)
         {
@@ -65,12 +65,12 @@ public class PlayerBehaviour : MonoBehaviour
             currentCollectible.Collect(this);
             collectedCount++;
 
-            
+
 
             if (collectedCount >= totalCollectibles)
             {
                 Debug.Log("All items collected! You win!");
-                // TODO: Trigger a UI message later
+                Respawn(); // Respawn the player after collecting all items
             }
 
             currentCollectible = null;
@@ -135,6 +135,7 @@ public class PlayerBehaviour : MonoBehaviour
         Debug.Log("Player respawned. Collectibles reset.");
 
     }
+    
 
 
     
