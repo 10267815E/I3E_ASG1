@@ -8,7 +8,7 @@
 - PC
 
 ## Premise
-Player is trapped in a research facility and has to collect all 5 energy sources to power the generator in the main floor. Due to the loss of power, barrels filled with toxic waste has erupted outside the lab, the processing facilities have all gone haywire. The player must restore power to the facility and put an end to the accidental death traps now littered across the building and beyond.
+Player is trapped in a research facility and has to collect all 5 energy sources to power the generator in the main floor. Due to the loss of power, barrels filled with toxic waste has erupted outside the lab, the processing facilities have all gone haywire, and the player's own creations have even gone rogue! The player must restore power to the facility and put an end to the accidental death traps now littered across the building and beyond.
 
 ## Game Outline
 
@@ -25,8 +25,13 @@ Player is trapped in a research facility and has to collect all 5 energy sources
 6. As the player collects the last energy source, he reactivates the generator and restores power to the facility, winning the game.
 
 ## Bugs and Limitations.
+After testing, I've found that the player can actually glitch through the wall and bypass it without interacting to open it.
 
+## Credits and References
 
+- Crystal 3D model (mesh for the energy sources) was made by me in Maya 
+- Door opening sound:https://pixabay.com/sound-effects/search/door%20open/ ("door open" by free_sound community)
+- BGM: https://pixabay.com/music/search/game%20background/?theme=background+music ("Menu Music" by SergeQuadrado)
 
 
 
