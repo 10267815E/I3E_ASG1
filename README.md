@@ -32,6 +32,9 @@ After testing, I've found that the player can actually glitch through the wall a
 - Crystal 3D model (mesh for the energy sources) was made by me in Maya 
 - Door opening sound:https://pixabay.com/sound-effects/search/door%20open/ ("door open" by free_sound community)
 - BGM: https://pixabay.com/music/search/game%20background/?theme=background+music ("Menu Music" by SergeQuadrado)
+- Vector 3 MoveTowards tutorial: https://www.youtube.com/watch?v=9eTZqxxgGz8
+- Time.deltaTime guide: https://docs.unity3d.com/ScriptReference/Time-deltaTime.html
+- Character controller guide: https://docs.unity3d.com/6000.1/Documentation/ScriptReference/CharacterController.html
 
 
 
