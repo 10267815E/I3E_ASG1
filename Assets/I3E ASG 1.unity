@@ -2548,7 +2548,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointA: {fileID: 207733792}
   pointB: {fileID: 189639674}
-  speed: 24
+  speed: 15
 --- !u!1 &148426615
 GameObject:
   m_ObjectHideFlags: 0
@@ -30701,7 +30701,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: cd881f8dd7ac70d4b929c162c354a622, type: 3}
   m_Resource: {fileID: 8300000, guid: cd881f8dd7ac70d4b929c162c354a622, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -32613,7 +32613,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointA: {fileID: 733416727}
   pointB: {fileID: 1318430728}
-  speed: 24
+  speed: 15
 --- !u!64 &1449432460
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -50433,7 +50433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointA: {fileID: 874078315}
   pointB: {fileID: 778462229}
-  speed: 24
+  speed: 15
 --- !u!64 &2067371118
 MeshCollider:
   m_ObjectHideFlags: 0
