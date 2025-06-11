@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ToxicZone : MonoBehaviour
 {
-    public int damagePerSecond = 30; // Damage per second
+    public int damagePerSecond = 10; // Damage per second
     private float damageCooldown = 0.3f; // 0.3s between damage ticks
     private float timer = 0f;
 
