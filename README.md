@@ -1,2 +1,6 @@
 # I3E_ASG1
-README test
+## Controls
+Movement: WASD
+Jump: Space bar
+Interact: E
+
