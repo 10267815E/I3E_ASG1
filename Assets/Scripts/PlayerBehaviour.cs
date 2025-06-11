@@ -5,25 +5,26 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine.ProBuilder.Shapes;
 /*
-* Author: 
-* Date:
-* Description:
+* Author: Xander 
+* Date: 8/6/25
+* Description: This script handles the interactivity of the player with collectibles, hazards, and doors.
+  It also manages the respawn functionality and the reset of collectibles when the player respawns.
 */
 
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    bool canInteract = false;
+    bool canInteract = false; // Determines if the player is able to interact with an object
     public int collectedCount = 0; // Number of collectibles collected by the player at the start, which would be 0
     public int totalCollectibles = 5; // Total number of collectibles in the game, which would be 5
 
-    private List<CollectibleBehaviour> allCollectibles = new List<CollectibleBehaviour>();
+    private List<CollectibleBehaviour> allCollectibles = new List<CollectibleBehaviour>(); // List to keep track of all collectibles
 
     public int health = 100; // Player's health
 
-    public Transform spawnPoint;
+    public Transform spawnPoint; // Player's respawn point
 
-    public UIManager uiManager;
+    public UIManager uiManager; // Reference to the UIManager script to update UI elements
 
     DoorBehaviour currentDoor; // Reference to the DoorBehaviour script
     CollectibleBehaviour currentCollectible; // Reference to the CollectibleBehaviour script
@@ -38,6 +39,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     {
 
+        // Find all collectible objects in the scene and store them in a list
         CollectibleBehaviour[] foundCollectibles = FindObjectsByType<CollectibleBehaviour>(FindObjectsSortMode.None);
         foreach (CollectibleBehaviour collectible in foundCollectibles)
         {
@@ -63,7 +65,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     void OnInteract()
     {
-        if (!canInteract) return;
+        if (!canInteract) return; // If player cannot interact, exit the function
 
         if (currentCollectible != null)
         {
@@ -78,7 +80,7 @@ public class PlayerBehaviour : MonoBehaviour
 
             currentCollectible = null;
         }
-
+        // If the player interacts with a door, call the Interact method on the door
         if (currentDoor != null)
         {
             currentDoor.Interact();
@@ -86,10 +88,10 @@ public class PlayerBehaviour : MonoBehaviour
             currentDoor = null;
         }
 
-        canInteract = false;
+        canInteract = false; // Reset interaction state after interaction
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other) // Detects when the player enters a trigger collider
     {
         if (other.CompareTag("Collectible"))
         {
@@ -110,7 +112,7 @@ public class PlayerBehaviour : MonoBehaviour
             health -= 50; // Reduce health by 50 when hit by a truck
             if (health <= 0)
             {
-                Respawn();
+                Respawn(); // Respawn the player if health drops to 0 or below
             }
         }
     }
@@ -118,6 +120,7 @@ public class PlayerBehaviour : MonoBehaviour
     void Respawn()
 
     {
+        // Temporarily disable CharacterController to move the player safely
         CharacterController controller = GetComponent<CharacterController>();
         if (controller != null)
         {
@@ -126,6 +129,7 @@ public class PlayerBehaviour : MonoBehaviour
             controller.enabled = true;
         }
 
+        // Reset player stats
         health = 100;
         collectedCount = 0;
 
