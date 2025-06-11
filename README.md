@@ -25,7 +25,7 @@ Player is trapped in a research facility and has to collect all 5 energy sources
 6. As the player collects the last energy source, he reactivates the generator and restores power to the facility, winning the game.
 
 ## Bugs and Limitations.
-After testing, I've found that the player can actually glitch through the wall and bypass it without interacting to open it.
+- After testing, I've found that the player can actually glitch through the wall and bypass it without interacting to open it.
 
 ## Credits and References
 
