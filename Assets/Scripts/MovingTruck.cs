@@ -21,7 +21,7 @@ public class MovingTruck : MonoBehaviour
         // Switch target if reached
         if (Vector3.Distance(transform.position, target) < 0.1f)
         {
-            if (target == pointB.position)
+            if (target == pointB.position)  // If currently at Point B, switch to Point A
             {
                 target = pointA.position;
             }

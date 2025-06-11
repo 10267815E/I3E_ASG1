@@ -12,6 +12,6 @@ public class CollectibleBehaviour : MonoBehaviour
 
     public void Respawn()
     {
-        gameObject.SetActive(true);
+        gameObject.SetActive(true);  // Re-enable the collectible object after respawn
     }
 }

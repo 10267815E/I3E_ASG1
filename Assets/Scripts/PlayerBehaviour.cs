@@ -47,7 +47,7 @@ public class PlayerBehaviour : MonoBehaviour
 
 
         // Check if health has dropped to 0 or below
-        if (health <= 0)
+        if (health <= 0)   // If health is less than or equal to 0, respawn the player
         {
             Respawn(); // Call the respawn function
         }
@@ -61,7 +61,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (currentCollectible != null)
         {
-            currentCollectible.Collect(this);
+            currentCollectible.Collect(this); 
             collectedCount++; // Increment the count of collected items
 
             if (collectedCount >= totalCollectibles)
@@ -99,7 +99,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Truck"))
+        if (collision.gameObject.CompareTag("Truck")) // If player touches a truck
         {
             health -= 50; // Reduce health by 50 when hit by a truck
             if (health <= 0)
