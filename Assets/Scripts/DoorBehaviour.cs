@@ -37,6 +37,15 @@ public class DoorBehaviour : MonoBehaviour
             Debug.Log("Collect at least 3 energy sources to unlock this door!");
         }
     }
+
+    public void ResetDoor() // Closes the door
+
+    {
+        transform.eulerAngles = closedRotation;
+        isOpen = false;
+
+    }
+
 }
 
 

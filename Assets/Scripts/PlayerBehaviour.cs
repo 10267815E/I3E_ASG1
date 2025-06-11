@@ -3,6 +3,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.ProBuilder.Shapes;
 
 public class PlayerBehaviour : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class PlayerBehaviour : MonoBehaviour
 
     DoorBehaviour currentDoor; // Reference to the DoorBehaviour script
     CollectibleBehaviour currentCollectible; // Reference to the CollectibleBehaviour script
+
+    public DoorBehaviour door;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -127,6 +130,14 @@ public class PlayerBehaviour : MonoBehaviour
         }
 
         Debug.Log("Player respawned. Collectibles reset."); // Test message to confirm respawn
+
+        if (door != null)  // After player respawns, reset the door 
+
+        {
+            door.ResetDoor();
+
+        }
+
 
     }
     
