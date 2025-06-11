@@ -4,6 +4,12 @@ using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine.ProBuilder.Shapes;
+/*
+* Author: 
+* Date:
+* Description:
+*/
+
 
 public class PlayerBehaviour : MonoBehaviour
 {
@@ -61,7 +67,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (currentCollectible != null)
         {
-            currentCollectible.Collect(this); 
+            currentCollectible.Collect(this);
             collectedCount++; // Increment the count of collected items
 
             if (collectedCount >= totalCollectibles)
@@ -140,7 +146,7 @@ public class PlayerBehaviour : MonoBehaviour
 
 
     }
-    
+
 
 
 }
