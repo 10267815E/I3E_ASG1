@@ -1,5 +1,9 @@
 using UnityEngine;
-
+/*
+* Author: Xander 
+* Date: 8/6/25
+* Description: This script handles the behavior of collectible items in the game, by toggling their active state when a player collects the item.
+*/
 public class CollectibleBehaviour : MonoBehaviour
 {
     
@@ -10,7 +14,7 @@ public class CollectibleBehaviour : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void Respawn()
+    public void Respawn() // Call respawn function
     {
         gameObject.SetActive(true);  // Re-enable the collectible object after respawn
     }
